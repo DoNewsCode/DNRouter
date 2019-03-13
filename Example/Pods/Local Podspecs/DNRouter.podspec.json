@@ -1,0 +1,22 @@
+{
+  "name": "DNRouter",
+  "version": "0.1.0",
+  "summary": "A short description of DNRouter.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/418589912@qq.com/DNRouter",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "418589912@qq.com": "418589912@qq.com"
+  },
+  "source": {
+    "git": "https://github.com/418589912@qq.com/DNRouter.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "DNRouter/Classes/**/*"
+}

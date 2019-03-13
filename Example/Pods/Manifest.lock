@@ -1,0 +1,16 @@
+PODS:
+  - DNRouter (0.1.0)
+
+DEPENDENCIES:
+  - DNRouter (from `../`)
+
+EXTERNAL SOURCES:
+  DNRouter:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  DNRouter: e53bf2f38f60a2231e6f4ddde822b6f2839d8482
+
+PODFILE CHECKSUM: a05acb07792669037d7f04dfdac182dfbfc4842d
+
+COCOAPODS: 1.5.3
