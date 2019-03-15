@@ -10,6 +10,7 @@
 #endif
 #endif
 
+#import "DNRouter.h"
 
 FOUNDATION_EXPORT double DNRouterVersionNumber;
 FOUNDATION_EXPORT const unsigned char DNRouterVersionString[];

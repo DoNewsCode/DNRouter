@@ -3,16 +3,16 @@
   "version": "0.1.0",
   "summary": "A short description of DNRouter.",
   "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/418589912@qq.com/DNRouter",
+  "homepage": "https://github.com/DoNewsCode/DNRouter",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
   },
   "authors": {
-    "418589912@qq.com": "418589912@qq.com"
+    "Ming": "418589912@qq.com"
   },
   "source": {
-    "git": "https://github.com/418589912@qq.com/DNRouter.git",
+    "git": "https://github.com/DoNewsCode/DNRouter.git",
     "tag": "0.1.0"
   },
   "platforms": {

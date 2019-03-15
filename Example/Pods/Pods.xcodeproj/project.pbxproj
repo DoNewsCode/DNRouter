@@ -7,15 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		29786065A48CBEFD9C04E656CB8F76F9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
-		62DFD555C6820126A5877E6F745CB01B /* DNRouter-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EC1FC747510C98E1E79376BD3947B1DE /* DNRouter-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		068C61A4C470EE692111CE97DA6E0EE3 /* DNRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6889D07E226A921E033FD79408769FF7 /* DNRouter.m */; };
+		31ACBB150D75B1A98DE22F2CFBEBE4C6 /* DNRouter.h in Headers */ = {isa = PBXBuildFile; fileRef = AAF00324905F71FB323C221EE1A305CB /* DNRouter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3E50A42EE3AF97E9513A84D7C5364270 /* DNRouter-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1192C5E48A4261DA897E969C55C56270 /* DNRouter-dummy.m */; };
+		84E81A89426EF992640AFD2FE96FE869 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
 		8EC12E991E20067755290A70B1451E22 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
 		9E012ECB5D3282DEB7334A8EA9EEEA03 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
+		A0AA0D28815A4AF13C0E16F178C01527 /* DNRouter-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F18ACB291466C5A1D12CCCA4D16788ED /* DNRouter-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C30215152EC28C0C59D8D3AC2DDAFC1F /* Pods-DNRouter_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C7B7C1F3A696182405371C829AB53041 /* Pods-DNRouter_Example-dummy.m */; };
 		C3215DBA8A9F95240F6E63DE4A6A4C52 /* Pods-DNRouter_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 094B49671E80544A73A41826FC4F23DC /* Pods-DNRouter_Tests-dummy.m */; };
 		C9FDF26C763A5653B78C310DE58520BC /* Pods-DNRouter_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 964F2C4183D582DCCE5A093D35DE42A3 /* Pods-DNRouter_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CE430D83BAA789A10142FB02E54354D5 /* Pods-DNRouter_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A40F211F9E9A4973C58D7A507FA01F0B /* Pods-DNRouter_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D63D9686DE8A4F0F7FCEAEE155B90E92 /* DNRouter-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CC71B1EA5ADDE32C02F4E9CF21300ACB /* DNRouter-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,54 +32,56 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 726DDE6238EB028651F0948FF3DC71AA;
+			remoteGlobalIDString = F8D9E7D05B959B11F19990C1F9157BD7;
 			remoteInfo = DNRouter;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		032D57781F1BACF5E1AF0015CF453C7C /* DNRouter.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DNRouter.xcconfig; sourceTree = "<group>"; };
 		03E2AED7DA7F6F638C948992FBE091EC /* Pods-DNRouter_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DNRouter_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		094B49671E80544A73A41826FC4F23DC /* Pods-DNRouter_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DNRouter_Tests-dummy.m"; sourceTree = "<group>"; };
-		178EAB9AFCD8D0269C262A4D145279A8 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1192C5E48A4261DA897E969C55C56270 /* DNRouter-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DNRouter-dummy.m"; sourceTree = "<group>"; };
+		2664E044CA19D4EF3F4F335985C31573 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		2F1B7A28A2470F2BEDDB0F7B734D26FB /* DNRouter.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = DNRouter.podspec; sourceTree = "<group>"; };
+		39AD0EFB93E5D5C89D7ED66BC7E7D496 /* DNRouter-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DNRouter-prefix.pch"; sourceTree = "<group>"; };
 		39ADFF35717B54A0E083593BE7F49B82 /* Pods-DNRouter_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-DNRouter_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		3A7F9F76A27119846029B62D4CA221AD /* DNRouter.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = DNRouter.modulemap; sourceTree = "<group>"; };
 		45C673E26150D1F7ED8E887CA83260F4 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5CC4DCD2291A8094A11344A4F8A18071 /* Pods-DNRouter_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-DNRouter_Example.modulemap"; sourceTree = "<group>"; };
+		6889D07E226A921E033FD79408769FF7 /* DNRouter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DNRouter.m; path = DNRouter/Classes/DNRouter.m; sourceTree = "<group>"; };
+		6A52A226FD998C4CC2C060D976C8F255 /* DNRouter.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = DNRouter.modulemap; sourceTree = "<group>"; };
 		6A93158A751BD219D86FA820EFC50ADB /* Pods-DNRouter_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-DNRouter_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		71D46CF558D9866B209D48F6E65C917B /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		7A2C9DA616C58842C1D48B641D9BB36E /* Pods-DNRouter_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DNRouter_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		7B9F6B246C208F4F1514E0A595110D87 /* DNRouter-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DNRouter-prefix.pch"; sourceTree = "<group>"; };
 		8DAFF9754C110A6C437E6473B0C5DDD4 /* Pods-DNRouter_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DNRouter_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		933268C0038CA2D324E401ED43FD290F /* Pods-DNRouter_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DNRouter_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		964F2C4183D582DCCE5A093D35DE42A3 /* Pods-DNRouter_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-DNRouter_Tests-umbrella.h"; sourceTree = "<group>"; };
 		997487E8B35C66B28F14FA916EA5D398 /* DNRouter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DNRouter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A079510733B38CEA918CBD850F5114BC /* Pods_DNRouter_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DNRouter_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A0E68F84A0537BEA0BF97CACB437340D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		A1780FF9CE47D300EE10D8A20250CA25 /* DNRouter.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = DNRouter.podspec; sourceTree = "<group>"; };
 		A40F211F9E9A4973C58D7A507FA01F0B /* Pods-DNRouter_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-DNRouter_Example-umbrella.h"; sourceTree = "<group>"; };
+		AAF00324905F71FB323C221EE1A305CB /* DNRouter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DNRouter.h; path = DNRouter/Classes/DNRouter.h; sourceTree = "<group>"; };
+		ACC07E81AFF9D172F6C4C5379959272C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AD1AED453C27C0EE095D0FCC7818CA23 /* Pods-DNRouter_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DNRouter_Example.release.xcconfig"; sourceTree = "<group>"; };
 		AF5153B3B2531C1CF049A713060FFDCD /* Pods-DNRouter_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DNRouter_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		B26AB78E3AD12A2A48A3A0171AD59CD2 /* Pods-DNRouter_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DNRouter_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		C1324070B9444CA7F525D8ED0CCD296C /* Pods-DNRouter_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DNRouter_Example-frameworks.sh"; sourceTree = "<group>"; };
-		C68B95FF9A940F27F3B12D50342C80CA /* DNRouter.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DNRouter.xcconfig; sourceTree = "<group>"; };
 		C7B7C1F3A696182405371C829AB53041 /* Pods-DNRouter_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DNRouter_Example-dummy.m"; sourceTree = "<group>"; };
-		CC71B1EA5ADDE32C02F4E9CF21300ACB /* DNRouter-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DNRouter-dummy.m"; sourceTree = "<group>"; };
 		D1A6C5D3646EB519FEC9B6BBE07DC38B /* Pods-DNRouter_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-DNRouter_Tests.modulemap"; sourceTree = "<group>"; };
 		D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		DFC209962B1DEE49BF54D2EB138A4BBF /* Pods_DNRouter_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DNRouter_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EC1FC747510C98E1E79376BD3947B1DE /* DNRouter-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DNRouter-umbrella.h"; sourceTree = "<group>"; };
+		E0DAFD830C77224E31554BED548ACF54 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		F18ACB291466C5A1D12CCCA4D16788ED /* DNRouter-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DNRouter-umbrella.h"; sourceTree = "<group>"; };
 		F2BF8A80FFF4030F4F1DA7717A79C922 /* Pods-DNRouter_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DNRouter_Tests-resources.sh"; sourceTree = "<group>"; };
 		F2D343BCCADDDB5672E3DEE49AFCC125 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F3E7066FC869CBB1826BB279C01256FA /* Pods-DNRouter_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DNRouter_Example-resources.sh"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		99485E629CA7F4DC2234EE3351AB45E7 /* Frameworks */ = {
+		1EB21FCB7846EE9EDAE790ADDC6C817B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				29786065A48CBEFD9C04E656CB8F76F9 /* Foundation.framework in Frameworks */,
+				84E81A89426EF992640AFD2FE96FE869 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,20 +122,6 @@
 			path = "Target Support Files/Pods-DNRouter_Tests";
 			sourceTree = "<group>";
 		};
-		0B458976CB5C8A7CFDE979833ACCC266 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				3A7F9F76A27119846029B62D4CA221AD /* DNRouter.modulemap */,
-				C68B95FF9A940F27F3B12D50342C80CA /* DNRouter.xcconfig */,
-				CC71B1EA5ADDE32C02F4E9CF21300ACB /* DNRouter-dummy.m */,
-				7B9F6B246C208F4F1514E0A595110D87 /* DNRouter-prefix.pch */,
-				EC1FC747510C98E1E79376BD3947B1DE /* DNRouter-umbrella.h */,
-				178EAB9AFCD8D0269C262A4D145279A8 /* Info.plist */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/DNRouter";
-			sourceTree = "<group>";
-		};
 		21B19A0D0E58BC31DBC496F7CBE8B30C /* Pods-DNRouter_Example */ = {
 			isa = PBXGroup;
 			children = (
@@ -167,35 +157,29 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		702475D698668A6C86C384A7F102D9B6 /* Pod */ = {
+		4FDC39446DBDFA69BDBF2273E61B1E16 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				A1780FF9CE47D300EE10D8A20250CA25 /* DNRouter.podspec */,
-				A0E68F84A0537BEA0BF97CACB437340D /* LICENSE */,
-				71D46CF558D9866B209D48F6E65C917B /* README.md */,
+				6A52A226FD998C4CC2C060D976C8F255 /* DNRouter.modulemap */,
+				032D57781F1BACF5E1AF0015CF453C7C /* DNRouter.xcconfig */,
+				1192C5E48A4261DA897E969C55C56270 /* DNRouter-dummy.m */,
+				39AD0EFB93E5D5C89D7ED66BC7E7D496 /* DNRouter-prefix.pch */,
+				F18ACB291466C5A1D12CCCA4D16788ED /* DNRouter-umbrella.h */,
+				ACC07E81AFF9D172F6C4C5379959272C /* Info.plist */,
 			);
-			name = Pod;
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/DNRouter";
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				B4547DA95462DF571F23495C915FA673 /* Development Pods */,
+				D81D3E8851C51037551FB0B351AEFA14 /* Development Pods */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
 				97646C96AB96733A6D3D622B65BC24FC /* Products */,
 				2FAA96AE7A648D6C0388CDE46488B9EF /* Targets Support Files */,
 			);
-			sourceTree = "<group>";
-		};
-		942757CC957AEB73F5B07C8C33F7758B /* DNRouter */ = {
-			isa = PBXGroup;
-			children = (
-				702475D698668A6C86C384A7F102D9B6 /* Pod */,
-				0B458976CB5C8A7CFDE979833ACCC266 /* Support Files */,
-			);
-			name = DNRouter;
-			path = ../..;
 			sourceTree = "<group>";
 		};
 		97646C96AB96733A6D3D622B65BC24FC /* Products */ = {
@@ -208,12 +192,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B4547DA95462DF571F23495C915FA673 /* Development Pods */ = {
+		AE1F136335910C78966FB1D9A41A9F17 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				942757CC957AEB73F5B07C8C33F7758B /* DNRouter */,
+				2F1B7A28A2470F2BEDDB0F7B734D26FB /* DNRouter.podspec */,
+				E0DAFD830C77224E31554BED548ACF54 /* LICENSE */,
+				2664E044CA19D4EF3F4F335985C31573 /* README.md */,
 			);
-			name = "Development Pods";
+			name = Pod;
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -224,17 +210,29 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D81D3E8851C51037551FB0B351AEFA14 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F77F083AFEE34CE06C4A8CE8F751DD22 /* DNRouter */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		F77F083AFEE34CE06C4A8CE8F751DD22 /* DNRouter */ = {
+			isa = PBXGroup;
+			children = (
+				AAF00324905F71FB323C221EE1A305CB /* DNRouter.h */,
+				6889D07E226A921E033FD79408769FF7 /* DNRouter.m */,
+				AE1F136335910C78966FB1D9A41A9F17 /* Pod */,
+				4FDC39446DBDFA69BDBF2273E61B1E16 /* Support Files */,
+			);
+			name = DNRouter;
+			path = ../..;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		22799C808063A8EE15317B52C227CF98 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				62DFD555C6820126A5877E6F745CB01B /* DNRouter-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		7FCACF3306009DCB3D51D92D24253DD6 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -248,6 +246,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9FDF26C763A5653B78C310DE58520BC /* Pods-DNRouter_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F258DAA874C7F25D206C565625BA25A2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0AA0D28815A4AF13C0E16F178C01527 /* DNRouter-umbrella.h in Headers */,
+				31ACBB150D75B1A98DE22F2CFBEBE4C6 /* DNRouter.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,24 +280,6 @@
 			productReference = DFC209962B1DEE49BF54D2EB138A4BBF /* Pods_DNRouter_Example.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		726DDE6238EB028651F0948FF3DC71AA /* DNRouter */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = CB25D2BF6FAC6DF37A30618A7A8BD6D2 /* Build configuration list for PBXNativeTarget "DNRouter" */;
-			buildPhases = (
-				22799C808063A8EE15317B52C227CF98 /* Headers */,
-				B68FB3D4BA5D69B77DA1B528569DD9E5 /* Sources */,
-				99485E629CA7F4DC2234EE3351AB45E7 /* Frameworks */,
-				683385A6AB92DE2967A3E53FF967C19A /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = DNRouter;
-			productName = DNRouter;
-			productReference = 997487E8B35C66B28F14FA916EA5D398 /* DNRouter.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 		E19B3B4B4EBAC1EAC342BC28BFC1F175 /* Pods-DNRouter_Tests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 665346E78FCAE97654A339C820F8C382 /* Build configuration list for PBXNativeTarget "Pods-DNRouter_Tests" */;
@@ -308,6 +297,24 @@
 			name = "Pods-DNRouter_Tests";
 			productName = "Pods-DNRouter_Tests";
 			productReference = A079510733B38CEA918CBD850F5114BC /* Pods_DNRouter_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		F8D9E7D05B959B11F19990C1F9157BD7 /* DNRouter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FE14BDAF3657A13513E4E57C395B54D6 /* Build configuration list for PBXNativeTarget "DNRouter" */;
+			buildPhases = (
+				F258DAA874C7F25D206C565625BA25A2 /* Headers */,
+				E8694D0838D0D0353E31759C69AA34F7 /* Sources */,
+				1EB21FCB7846EE9EDAE790ADDC6C817B /* Frameworks */,
+				40DEA747F1CB0095B5AA3C8BCBD54CB5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DNRouter;
+			productName = DNRouter;
+			productReference = 997487E8B35C66B28F14FA916EA5D398 /* DNRouter.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -331,7 +338,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				726DDE6238EB028651F0948FF3DC71AA /* DNRouter */,
+				F8D9E7D05B959B11F19990C1F9157BD7 /* DNRouter */,
 				19E2DE24BCC544726EECBCFF3B4C88EC /* Pods-DNRouter_Example */,
 				E19B3B4B4EBAC1EAC342BC28BFC1F175 /* Pods-DNRouter_Tests */,
 			);
@@ -339,7 +346,7 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		683385A6AB92DE2967A3E53FF967C19A /* Resources */ = {
+		40DEA747F1CB0095B5AA3C8BCBD54CB5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -371,19 +378,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B68FB3D4BA5D69B77DA1B528569DD9E5 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D63D9686DE8A4F0F7FCEAEE155B90E92 /* DNRouter-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		D99FF4B9039BDCDDCFC45B99F0F1C088 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				C30215152EC28C0C59D8D3AC2DDAFC1F /* Pods-DNRouter_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E8694D0838D0D0353E31759C69AA34F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E50A42EE3AF97E9513A84D7C5364270 /* DNRouter-dummy.m in Sources */,
+				068C61A4C470EE692111CE97DA6E0EE3 /* DNRouter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,7 +401,7 @@
 		1C892D7F0806D294EFA42D2B8E40A0CB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = DNRouter;
-			target = 726DDE6238EB028651F0948FF3DC71AA /* DNRouter */;
+			target = F8D9E7D05B959B11F19990C1F9157BD7 /* DNRouter */;
 			targetProxy = 95212111A840B89CD40984C8EF3CC449 /* PBXContainerItemProxy */;
 		};
 		CC96C11B2E40FC5171BFBA65830BE4DF /* PBXTargetDependency */ = {
@@ -405,6 +413,37 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		0E0AB4C8355B8436C75C3F905CCEEFEF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 032D57781F1BACF5E1AF0015CF453C7C /* DNRouter.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/DNRouter/DNRouter-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/DNRouter/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/DNRouter/DNRouter.modulemap";
+				PRODUCT_MODULE_NAME = DNRouter;
+				PRODUCT_NAME = DNRouter;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		4B1DFCDDFEC6DF87C9587394BCDA745B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B26AB78E3AD12A2A48A3A0171AD59CD2 /* Pods-DNRouter_Example.debug.xcconfig */;
@@ -438,9 +477,9 @@
 			};
 			name = Debug;
 		};
-		78F2D2A26447E204EFA982FD8ED8B269 /* Release */ = {
+		59001F67FB88B18E1A45D774BA5F54D3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C68B95FF9A940F27F3B12D50342C80CA /* DNRouter.xcconfig */;
+			baseConfigurationReference = 032D57781F1BACF5E1AF0015CF453C7C /* DNRouter.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -463,11 +502,10 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 		85B95B1234E227C814CCC2C7902D0916 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -697,36 +735,6 @@
 			};
 			name = Release;
 		};
-		FB1C582B5B4C968BBF3F1FB44C32D4D0 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C68B95FF9A940F27F3B12D50342C80CA /* DNRouter.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/DNRouter/DNRouter-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/DNRouter/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/DNRouter/DNRouter.modulemap";
-				PRODUCT_MODULE_NAME = DNRouter;
-				PRODUCT_NAME = DNRouter;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -757,11 +765,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CB25D2BF6FAC6DF37A30618A7A8BD6D2 /* Build configuration list for PBXNativeTarget "DNRouter" */ = {
+		FE14BDAF3657A13513E4E57C395B54D6 /* Build configuration list for PBXNativeTarget "DNRouter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FB1C582B5B4C968BBF3F1FB44C32D4D0 /* Debug */,
-				78F2D2A26447E204EFA982FD8ED8B269 /* Release */,
+				59001F67FB88B18E1A45D774BA5F54D3 /* Debug */,
+				0E0AB4C8355B8436C75C3F905CCEEFEF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
