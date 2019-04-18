@@ -304,8 +304,17 @@ typedef void(^DNRouterResultblock)(id result);
     return parameters;
 }
 
+- (NSMutableDictionary *)routes
+{
+    if (!_routes) {
+        _routes = [[NSMutableDictionary alloc] init];
+    }
+    return _routes;
+}
+
 + (BOOL)checkIfContainsSpecialCharacter:(NSString *)checkedString {
     NSCharacterSet *specialCharactersSet = [NSCharacterSet characterSetWithCharactersInString:specialCharacters];
     return [checkedString rangeOfCharacterFromSet:specialCharactersSet].location != NSNotFound;
 }
+
 @end
