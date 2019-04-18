@@ -8,6 +8,9 @@
 
 #import "DNViewController.h"
 
+#import "DNRouter.h"
+
+#import "DNTestVViewController.h"
 @interface DNViewController ()
 
 @end
@@ -17,7 +20,28 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    self.view.backgroundColor = [UIColor orangeColor];
+    NSLog(@"DRTMainListViewController==viewDidLoad");
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeContactAdd];
+    button.frame = (CGRect){100,100,100,100};
+    [self.view addSubview:button];
+    [button addTarget:self action:@selector(eventButtonClick:) forControlEvents:UIControlEventTouchUpInside];
+    
+    UIButton *button2 = [UIButton buttonWithType:UIButtonTypeContactAdd];
+    button2.frame = (CGRect){250,100,100,100};
+    [self.view addSubview:button2];
+    [button2 addTarget:self action:@selector(eventButton2Click:) forControlEvents:UIControlEventTouchUpInside];
+}
+
+- (void)eventButton2Click:(UIButton *)button {
+    UINavigationController *navigationController = [UINavigationController new];
+    DNTestVViewController *testViewController = [DNTestVViewController new];
+    [navigationController addChildViewController:testViewController];
+    [self presentViewController:navigationController animated:YES completion:nil];
+    
+}
+
+- (void)eventButtonClick:(UIButton *)button {
 }
 
 - (void)didReceiveMemoryWarning

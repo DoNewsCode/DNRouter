@@ -161,16 +161,13 @@ typedef void(^DNRouterResultblock)(id result);
 {
     NSArray *pathComponents = [self pathComponentsFromURL:URLPattern];
     
-    NSInteger index = 0;
     NSMutableDictionary* subRoutes = self.routes;
     
-    while (index < pathComponents.count) {
-        NSString* pathComponent = pathComponents[index];
+    for (NSString* pathComponent in pathComponents) {
         if (![subRoutes objectForKey:pathComponent]) {
             subRoutes[pathComponent] = [[NSMutableDictionary alloc] init];
         }
         subRoutes = subRoutes[pathComponent];
-        index++;
     }
     return subRoutes;
 }

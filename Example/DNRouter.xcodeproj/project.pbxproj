@@ -22,6 +22,11 @@
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
+		6685CAEC22685CC6000D20BD /* DNViewControllerOne.m in Sources */ = {isa = PBXBuildFile; fileRef = 6685CAEB22685CC6000D20BD /* DNViewControllerOne.m */; };
+		6685CAEF22685CD1000D20BD /* DNViewControllerTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = 6685CAEE22685CD1000D20BD /* DNViewControllerTwo.m */; };
+		6685CAF222685CDA000D20BD /* DNViewControllerThree.m in Sources */ = {isa = PBXBuildFile; fileRef = 6685CAF122685CDA000D20BD /* DNViewControllerThree.m */; };
+		6685CAF522685D08000D20BD /* DNGlobalMiduleRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6685CAF422685D08000D20BD /* DNGlobalMiduleRouter.m */; };
+		6685CAF822686A81000D20BD /* DNTestVViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6685CAF722686A81000D20BD /* DNTestVViewController.m */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 /* End PBXBuildFile section */
@@ -59,6 +64,16 @@
 		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
+		6685CAEA22685CC6000D20BD /* DNViewControllerOne.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DNViewControllerOne.h; sourceTree = "<group>"; };
+		6685CAEB22685CC6000D20BD /* DNViewControllerOne.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DNViewControllerOne.m; sourceTree = "<group>"; };
+		6685CAED22685CD1000D20BD /* DNViewControllerTwo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DNViewControllerTwo.h; sourceTree = "<group>"; };
+		6685CAEE22685CD1000D20BD /* DNViewControllerTwo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DNViewControllerTwo.m; sourceTree = "<group>"; };
+		6685CAF022685CDA000D20BD /* DNViewControllerThree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DNViewControllerThree.h; sourceTree = "<group>"; };
+		6685CAF122685CDA000D20BD /* DNViewControllerThree.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DNViewControllerThree.m; sourceTree = "<group>"; };
+		6685CAF322685D08000D20BD /* DNGlobalMiduleRouter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DNGlobalMiduleRouter.h; sourceTree = "<group>"; };
+		6685CAF422685D08000D20BD /* DNGlobalMiduleRouter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DNGlobalMiduleRouter.m; sourceTree = "<group>"; };
+		6685CAF622686A81000D20BD /* DNTestVViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DNTestVViewController.h; sourceTree = "<group>"; };
+		6685CAF722686A81000D20BD /* DNTestVViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DNTestVViewController.m; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		83B07020B1524B7E9AC85CFA /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -134,9 +149,19 @@
 			children = (
 				6003F59C195388D20070C39A /* DNAppDelegate.h */,
 				6003F59D195388D20070C39A /* DNAppDelegate.m */,
+				6685CAF322685D08000D20BD /* DNGlobalMiduleRouter.h */,
+				6685CAF422685D08000D20BD /* DNGlobalMiduleRouter.m */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
 				6003F5A5195388D20070C39A /* DNViewController.h */,
 				6003F5A6195388D20070C39A /* DNViewController.m */,
+				6685CAF622686A81000D20BD /* DNTestVViewController.h */,
+				6685CAF722686A81000D20BD /* DNTestVViewController.m */,
+				6685CAEA22685CC6000D20BD /* DNViewControllerOne.h */,
+				6685CAEB22685CC6000D20BD /* DNViewControllerOne.m */,
+				6685CAED22685CD1000D20BD /* DNViewControllerTwo.h */,
+				6685CAEE22685CD1000D20BD /* DNViewControllerTwo.m */,
+				6685CAF022685CDA000D20BD /* DNViewControllerThree.h */,
+				6685CAF122685CDA000D20BD /* DNViewControllerThree.m */,
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
@@ -257,6 +282,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -368,8 +394,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				6003F59E195388D20070C39A /* DNAppDelegate.m in Sources */,
+				6685CAF822686A81000D20BD /* DNTestVViewController.m in Sources */,
+				6685CAF222685CDA000D20BD /* DNViewControllerThree.m in Sources */,
+				6685CAEF22685CD1000D20BD /* DNViewControllerTwo.m in Sources */,
+				6685CAF522685D08000D20BD /* DNGlobalMiduleRouter.m in Sources */,
 				6003F5A7195388D20070C39A /* DNViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
+				6685CAEC22685CC6000D20BD /* DNViewControllerOne.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
