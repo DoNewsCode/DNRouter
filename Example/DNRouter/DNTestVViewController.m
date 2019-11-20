@@ -34,10 +34,14 @@
 
 - (void)eventButton2Click:(UIButton *)button {
     //    [self.navigationController pushViewController:[DRTTimeLineDetailViewController new] animated:YES];
-    [DNRouter openURL:@"LWT://Test1/PushMainVCOne"
-         withUserInfo:@{@"navigationVC" : self.navigationController,
-                        }
-           completion:nil];
+//    [DNRouter openURL:@"LWT://Test1/PushMainVCOne"
+//         withUserInfo:@{@"navigationVC" : self.navigationController,
+//                        }
+//           completion:nil];
+    
+    [DNRouter openURL:@"" withUserInfo:@{@"navigationVC" : self.navigationController} completion:^(id  _Nullable result) {
+        
+    }];
 }
 
 - (void)eventButtonClick:(UIButton *)button {

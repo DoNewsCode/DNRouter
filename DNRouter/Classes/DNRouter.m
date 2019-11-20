@@ -42,11 +42,11 @@ typedef void(^DNRouterResultblock)(id result);
 }
 
 #pragma mark - Public
-+ (void)registerURLPattern:(NSString *)URLPattern toHandler:(DNRouterHandler)handler {
++ (void)registerURLPattern:(NSString *__nullable)URLPattern toHandler:(DNRouterHandler)handler {
     [[self sharedInstance] addURLPattern:URLPattern andHandler:handler];
 }
 
-+ (void)registerURLPattern:(NSString *)URLPattern toObjectHandler:(DNRouterObjectHandler)handler {
++ (void)registerURLPattern:(NSString *__nullable)URLPattern toObjectHandler:(DNRouterObjectHandler)handler {
    [[self sharedInstance] addURLPattern:URLPattern andObjectHandler:handler];
 }
 
@@ -54,15 +54,15 @@ typedef void(^DNRouterResultblock)(id result);
     [[self sharedInstance] removeURLPattern:URLPattern];
 }
 
-+ (void)openURL:(NSString *)URL {
++ (void)openURL:(NSString *__nullable)URL {
     [self openURL:URL completion:nil];
 }
 
-+ (void)openURL:(NSString *)URL completion:(void (^)(id result))completion {
++ (void)openURL:(NSString *__nullable)URL completion:(DNRouterCompletion)completion {
     [self openURL:URL withUserInfo:nil completion:completion];
 }
 
-+ (void)openURL:(NSString *)URL withUserInfo:(NSDictionary *)userInfo completion:(DNRouterResultblock) completion {
++ (void)openURL:(NSString *__nullable)URL withUserInfo:(NSDictionary *)userInfo completion:(DNRouterCompletion) completion {
     URL = [URL stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     NSMutableDictionary *parameters = [[self sharedInstance] extractParametersFromURL:URL];
     

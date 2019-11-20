@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'DNRouter'
-  s.version          = '0.1.3'
+  s.version          = '1.5.0'
   s.summary          = 'A short description of DNRouter.'
 
 # This description is used to generate tags and improve search results.
