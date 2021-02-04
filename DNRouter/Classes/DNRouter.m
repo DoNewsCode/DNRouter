@@ -42,15 +42,15 @@ typedef void(^DNRouterResultblock)(id result);
 }
 
 #pragma mark - Public
-+ (void)registerURLPattern:(NSString *__nullable)URLPattern toHandler:(DNRouterHandler)handler {
++ (void)registerURLPattern:(NSString *__nullable)URLPattern toHandler:(DNRouterHandler __nullable)handler {
     [[self sharedInstance] addURLPattern:URLPattern andHandler:handler];
 }
 
-+ (void)registerURLPattern:(NSString *__nullable)URLPattern toObjectHandler:(DNRouterObjectHandler)handler {
-   [[self sharedInstance] addURLPattern:URLPattern andObjectHandler:handler];
++ (void)registerURLPattern:(NSString *__nullable)URLPattern toObjectHandler:(DNRouterObjectHandler __nullable)handler {
+    [[self sharedInstance] addURLPattern:URLPattern andObjectHandler:handler];
 }
 
-+ (void)deregisterURLPattern:(NSString *)URLPattern {
++ (void)deregisterURLPattern:(NSString * __nullable)URLPattern {
     [[self sharedInstance] removeURLPattern:URLPattern];
 }
 
@@ -58,17 +58,25 @@ typedef void(^DNRouterResultblock)(id result);
     [self openURL:URL completion:nil];
 }
 
-+ (void)openURL:(NSString *__nullable)URL completion:(DNRouterCompletion)completion {
++ (void)openURL:(NSString *__nullable)URL completion:(DNRouterCompletion __nullable)completion {
     [self openURL:URL withUserInfo:nil completion:completion];
 }
 
-+ (void)openURL:(NSString *__nullable)URL withUserInfo:(NSDictionary *)userInfo completion:(DNRouterCompletion) completion {
++ (void)openURL:(NSString *__nullable)URL withUserInfo:(NSDictionary *)userInfo completion:(DNRouterCompletion __nullable)completion {
+    
+//    if (@available(iOS 9.0, *)) {
+//        NSString *charactersToEscape = @"?!@#$^&%*+,;='\"`<>()[]{}\\| ";
+//        NSCharacterSet *allowedCharacters = [[NSCharacterSet characterSetWithCharactersInString:charactersToEscape] invertedSet];
+//        URL = [URL stringByAddingPercentEncodingWithAllowedCharacters:allowedCharacters];
+//    } else {
+//        
+//    }
     URL = [URL stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     NSMutableDictionary *parameters = [[self sharedInstance] extractParametersFromURL:URL];
     
     [parameters enumerateKeysAndObjectsUsingBlock:^(id key, NSString *obj, BOOL *stop) {
         if ([obj isKindOfClass:[NSString class]]) {
-            parameters[key] = [obj stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+            parameters[key] = obj.stringByRemovingPercentEncoding;
         }
     }];
     
@@ -87,13 +95,20 @@ typedef void(^DNRouterResultblock)(id result);
     }
 }
 
-+ (id)objectForURL:(NSString *)URL {
++ (id)objectForURL:(NSString * __nullable)URL {
     return [self objectForURL:URL withUserInfo:nil];
 }
 
-+ (id)objectForURL:(NSString *)URL withUserInfo:(NSDictionary *)userInfo {
++ (id)objectForURL:(NSString * __nullable)URL withUserInfo:(NSDictionary * __nullable)userInfo {
     DNRouter *router = [DNRouter sharedInstance];
     
+//    if (@available(iOS 9.0, *)) {
+//        NSString *charactersToEscape = @"?!@#$^&%*+,;='\"`<>()[]{}\\| ";
+//        NSCharacterSet *allowedCharacters = [[NSCharacterSet characterSetWithCharactersInString:charactersToEscape] invertedSet];
+//        URL = [URL stringByAddingPercentEncodingWithAllowedCharacters:allowedCharacters];
+//    } else {
+//
+//    }
     URL = [URL stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     NSMutableDictionary *parameters = [router extractParametersFromURL:URL];
     DNRouterObjectHandler handler = parameters[@"block"];
@@ -108,11 +123,11 @@ typedef void(^DNRouterResultblock)(id result);
     return nil;
 }
 
-+ (BOOL)canOpenURL:(NSString *)URL {
++ (BOOL)canOpenURL:(NSString * __nullable)URL {
     return [[self sharedInstance] extractParametersFromURL:URL] ? YES : NO;
 }
 
-+ (NSString *)generateURLWithPattern:(NSString *)pattern parameters:(NSArray *)parameters {
++ (NSString *)generateURLWithPattern:(NSString * __nullable)pattern parameters:(NSArray * __nullable)parameters {
     NSInteger startIndexOfColon = 0;
     
     NSMutableArray *placeholders = [NSMutableArray array];
@@ -150,14 +165,14 @@ typedef void(^DNRouterResultblock)(id result);
 }
 
 #pragma mark - Private
-- (void)addURLPattern:(NSString *)URLPattern andHandler:(DNRouterHandler)handler{
+- (void)addURLPattern:(NSString * __nullable)URLPattern andHandler:(DNRouterHandler __nullable)handler{
     NSMutableDictionary *subRoutes = [self addURLPattern:URLPattern];
     if (handler && subRoutes) {
         subRoutes[@"_"] = [handler copy];
     }
 }
 
-- (NSMutableDictionary *)addURLPattern:(NSString *)URLPattern
+- (NSMutableDictionary *)addURLPattern:(NSString * __nullable)URLPattern
 {
     NSArray *pathComponents = [self pathComponentsFromURL:URLPattern];
     
@@ -172,7 +187,7 @@ typedef void(^DNRouterResultblock)(id result);
     return subRoutes;
 }
 
-- (NSArray*)pathComponentsFromURL:(NSString*)URL
+- (NSArray*)pathComponentsFromURL:(NSString * __nullable)URL
 {
     NSMutableArray *pathComponents = [NSMutableArray array];
     if ([URL rangeOfString:@"://"].location != NSNotFound) {
@@ -196,7 +211,7 @@ typedef void(^DNRouterResultblock)(id result);
     return [pathComponents copy];
 }
 
-- (void)addURLPattern:(NSString *)URLPattern andObjectHandler:(DNRouterObjectHandler)handler
+- (void)addURLPattern:(NSString * __nullable)URLPattern andObjectHandler:(DNRouterObjectHandler __nullable)handler
 {
     NSMutableDictionary *subRoutes = [self addURLPattern:URLPattern];
     if (handler && subRoutes) {
@@ -229,7 +244,7 @@ typedef void(^DNRouterResultblock)(id result);
     }
 }
 
-- (NSMutableDictionary *)extractParametersFromURL:(NSString *)url
+- (NSMutableDictionary *)extractParametersFromURL:(NSString * __nullable)url
 {
     NSMutableDictionary* parameters = [NSMutableDictionary dictionary];
     
@@ -309,7 +324,7 @@ typedef void(^DNRouterResultblock)(id result);
     return _routes;
 }
 
-+ (BOOL)checkIfContainsSpecialCharacter:(NSString *)checkedString {
++ (BOOL)checkIfContainsSpecialCharacter:(NSString * __nullable)checkedString {
     NSCharacterSet *specialCharactersSet = [NSCharacterSet characterSetWithCharactersInString:specialCharacters];
     return [checkedString rangeOfCharacterFromSet:specialCharactersSet].location != NSNotFound;
 }

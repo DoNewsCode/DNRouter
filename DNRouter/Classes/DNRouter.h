@@ -18,10 +18,10 @@ extern NSString *const DNRouterParameterCompletion;
 extern NSString *const DNRouterParameterUserInfo;
 
 /// routerParameters内置的几个参数会需要配合上面定义的string使用
-typedef void(^DNRouterHandler)(NSDictionary *routerParameters);
+typedef void(^DNRouterHandler)(NSDictionary * __nullable routerParameters);
 
 /// 需要返回一个 object，配合 objectForURL: 使用
-typedef id _Nullable (^DNRouterObjectHandler)(NSDictionary *routerParameters);
+typedef id _Nullable (^DNRouterObjectHandler)(NSDictionary * __nullable routerParameters);
 //
 /// 需要返回一个 object，配合 objectForURL: 使用
 typedef void(^DNRouterCompletion)(id __nullable result);
@@ -32,12 +32,12 @@ typedef void(^DNRouterCompletion)(id __nullable result);
 /// 注册 URLPattern 对应的 Handler，在 handler 中可以初始化 VC，然后对 VC 做各种操作
 /// @param URLPattern URL键值；带上 scheme，如 renren://beauty/:id
 /// @param handler 该 block 会传一个字典，包含了注册的 URL 中对应的变量。假如注册的 URL 为 renren://beauty/:id 那么，就会传一个 @{@"id": 4} 这样的字典过来
-+ (void)registerURLPattern:(NSString *__nullable)URLPattern toHandler:(DNRouterHandler)handler;
++ (void)registerURLPattern:(NSString *__nullable)URLPattern toHandler:(DNRouterHandler __nullable)handler;
 
 /// 注册 URLPattern 对应的 ObjectHandler，需要返回一个 object 给调用方
 /// @param URLPattern URL键值；带上 scheme，如 mgj://beauty/:id
 /// @param handler 该 block 会传一个字典，包含了注册的 URL 中对应的变量。假如注册的 URL 为 renren://beauty/:id 那么，就会传一个 @{@"id": 4} 这样的字典过来,自带的 key 为 @"url" 和 @"completion" (如果有的话)
-+ (void)registerURLPattern:(NSString *__nullable)URLPattern toObjectHandler:(DNRouterObjectHandler)handler;
++ (void)registerURLPattern:(NSString *__nullable)URLPattern toObjectHandler:(DNRouterObjectHandler __nullable)handler;
 
 #pragma mark - Cancel
 /// 取消注册某个 URL Pattern
@@ -55,14 +55,14 @@ typedef void(^DNRouterCompletion)(id __nullable result);
 /// 打开此 URL，同时当操作完成时，执行额外的代码
 /// @param URL        带 Scheme 的 URL，如 renren://beauty/4
 /// @param completion URL 处理完成后的 callback，完成的判定跟具体的业务相关
-+ (void)openURL:(NSString *__nullable)URL completion:(DNRouterCompletion)completion;
++ (void)openURL:(NSString *__nullable)URL completion:(DNRouterCompletion __nullable)completion;
 
 /// 打开此 URL，带上附加信息，同时当操作完成时，执行额外的代码
 
 /// @param URL 带 Scheme 的 URL，如 renren://beauty/4
 /// @param userInfo 附加参数
 /// @param completion URL 处理完成后的 callback，完成的判定跟具体的业务相关
-+ (void)openURL:(NSString *__nullable)URL withUserInfo:(NSDictionary *__nullable)userInfo completion:(DNRouterCompletion)completion;
++ (void)openURL:(NSString *__nullable)URL withUserInfo:(NSDictionary *__nullable)userInfo completion:(DNRouterCompletion __nullable)completion;
 
 #pragma mark - Find
 
